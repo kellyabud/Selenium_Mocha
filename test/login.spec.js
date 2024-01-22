@@ -9,9 +9,9 @@ describe('Testes de Login', () => {
     //Acesso o site
     await driver.get('https://edu.ultima.school/lgn/');
     //Digito o usuário
-    await driver.findElement(By.id('user_login')).sendKeys('kelly.abud@gmail.com');
+    await driver.findElement(By.id('user_login')).sendKeys('email');
     //Digito a senha
-    await driver.findElement(By.id('user_pass')).sendKeys('((senha@ultima))');
+    await driver.findElement(By.id('user_pass')).sendKeys('senha');
     //Clico no botão conecte-se
     await driver.findElement(By.id('wp-submit')).click();
     //Valido que entrei
@@ -52,8 +52,8 @@ it('Deve falhar ao tentar fazer login com credenciais inválidas', async () => {
   await driver.get('https://edu.ultima.school/lgn/');
 
   // Insira um e-mail inválido 
-  await driver.findElement(By.id('user_login')).sendKeys('kelly1@gmail.com');
-  await driver.findElement(By.id('user_pass')).sendKeys('((senha@ultima))');
+  await driver.findElement(By.id('user_login')).sendKeys('emailinválido');
+  await driver.findElement(By.id('user_pass')).sendKeys('senha');
 
   // Clicar no botão conecte-se
   await driver.findElement(By.id('wp-submit')).click();
