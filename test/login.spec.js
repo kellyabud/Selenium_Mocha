@@ -21,7 +21,18 @@ describe('Testes de Login', () => {
 
   })
 });
-
+    //try {
+    //await driver.findElement(By.xpath('//*[@id="post-10"]/header/h1[contains(text(), "Meus cursos")]'));
+    //console.log('Element found successfully.');
+    //} catch (error) {
+    //console.error('Element not found:', error);
+    //assert.fail('Element not found');
+    //} finally {
+    //await driver.quit();
+    //}
+//})
+//});
+    
 it('Deve falhar ao tentar fazer login com campos em branco', async () => {
   // Abrir o navegador
   const driver = await new Builder().forBrowser('firefox').build();
@@ -66,7 +77,6 @@ it('Deve falhar ao tentar fazer login com credenciais inválidas', async () => {
   assert.strictEqual(mensagemErro, 'Unknown email address. Check again or try your username.');
   //Fechar janela
   await driver.quit();
-
 
 });
 
