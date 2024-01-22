@@ -1,0 +1,19 @@
+{
+  "name": "selewebdriver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 20000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.1.0",
+    "geckodriver": "^4.3.0",
+    "mocha": "^10.2.0",
+    "selenium-manager": "^0.4.3",
+    "selenium-webdriver": "^4.13.0"
+  }
+}
