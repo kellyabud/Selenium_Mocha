@@ -15,23 +15,13 @@ describe('Testes de Login', () => {
     //Clico no botão conecte-se
     await driver.findElement(By.id('wp-submit')).click();
     //Valido que entrei
-    await driver.findElement(By.xpath('//*[@id="post-10"]/header/h1[contains(text(), "Meus cursos")]'));
+    const element = await driver.findElement(By.xpath('//*[@id="post-10"]/header/h1[contains(text(), "Meus cursos")]'));
+    assert.ok(await element.isDisplayed(), 'O elemento "Meus cursos" não está visível.');
     //Fechar janela
     await driver.quit();
 
-  })
-});
-    //try {
-    //await driver.findElement(By.xpath('//*[@id="post-10"]/header/h1[contains(text(), "Meus cursos")]'));
-    //console.log('Element found successfully.');
-    //} catch (error) {
-    //console.error('Element not found:', error);
-    //assert.fail('Element not found');
-    //} finally {
-    //await driver.quit();
-    //}
-//})
-//});
+  });
+
     
 it('Deve falhar ao tentar fazer login com campos em branco', async () => {
   // Abrir o navegador
