@@ -19,7 +19,7 @@ describe('Testes de Login', () => {
     assert.ok(await element.isDisplayed(), 'O elemento "Meus cursos" não está visível.');
     //Fechar janela
     await driver.quit();
-
+  });
   });
 
     
